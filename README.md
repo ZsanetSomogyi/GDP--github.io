@@ -52,12 +52,12 @@ A notebook az alábbi főbb részekből épül fel:
 ## 🔗 Elérhetőség
 
 📊 A projekt HTML-változata itt megtekinthető:  
-👉 
+👉 https://zsanetsomogyi.github.io/GDP--github.io/
 
 ---
 
 ## 📬 Kapcsolat
 
 Készítette: **Zsanet Somogyi**  **Kulcsar Szabina**
-Ha kérdésed vagy javaslatod van, nyugodtan írj a GitHub-profilomon keresztül.
+Ha kérdésed vagy javaslatod van, nyugodtan írj a GitHub-profilunkon keresztül.
 
