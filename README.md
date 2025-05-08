@@ -52,7 +52,7 @@ A notebook az alábbi főbb részekből épül fel:
 ## 🔗 Elérhetőség
 
 📊 A projekt HTML-változata itt megtekinthető:  
-👉 https://zsanetsomogyi.github.io/GDP--github.io/
+👉 https://zsanetsomogyi.github.io/GDP.github.io/
 
 ---
 
