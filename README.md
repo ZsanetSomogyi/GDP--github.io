@@ -58,6 +58,6 @@ A notebook az alábbi főbb részekből épül fel:
 
 ## 📬 Kapcsolat
 
-Készítette: **Zsanet Somogyi**  **Kulcsar Szabina**
+Készítette: **Zsanet Somogyi**  és  **Kulcsar Szabina**
 Ha kérdésed vagy javaslatod van, nyugodtan írj a GitHub-profilunkon keresztül.
 
