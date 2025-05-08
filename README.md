@@ -1,4 +1,4 @@
-# GDP--github.io
+# GDP.github.io
 
 # 🌍 GDP Elemzés Weboldal
 
