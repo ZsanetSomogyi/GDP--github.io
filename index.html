@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+
+<html lang="hu">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GDP Projekt – Teljes (HU/RO/EN)</title>
+<style>
+
+:root {
+  --light-bg: rgba(245, 235, 225, 0.96);
+  --dark-bg: rgba(20, 20, 20, 0.96);
+  --light-text: #222;
+  --dark-text: #f0f0f0;
+}
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--light-bg);
+  color: var(--light-text);
+  transition: all 0.3s ease;
+}
+body.dark {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+nav {
+  width: 250px;
+  position: fixed;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  padding: 2rem 1rem;
+  overflow-y: auto;
+  border-right: 1px solid #ccc;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+nav li {
+  margin-bottom: 0.75rem;
+}
+nav a {
+  text-decoration: none;
+  font-weight: 500;
+  color: inherit;
+  padding: 0.4rem 0.6rem;
+  display: block;
+  transition: background 0.2s;
+}
+nav a:hover {
+  background: rgba(139, 94, 60, 0.1);
+  border-radius: 4px;
+}
+main {
+  margin-left: 270px;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+}
+.centered-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #c9a57e;
+  padding-bottom: 0.5rem;
+}
+section {
+  margin-bottom: 3rem;
+  display: block;
+}
+img, iframe {
+  display: block;
+  max-width: 100%;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.07);
+}
+iframe {
+  height: 600px;
+  width: 100%;
+  border: none;
+}
+.theme-toggle, .language-switcher {
+  margin-top: 2rem;
+}
+.lang { display: none; }
+
+    :root {
+      --light-bg: rgba(255, 255, 255, 0.9);
+      --light-text: #222;
+      --dark-bg: rgba(20, 20, 20, 0.95);
+      --dark-text: #f0f0f0;
+    }
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: var(--light-bg);
+      color: var(--light-text);
+      transition: all 0.3s ease;
+    }
+    body.dark {
+      background: var(--dark-bg);
+      color: var(--dark-text);
+    }
+    .lang { display: none; }
+    .theme-toggle, .language-switcher button {
+      margin: 0.5rem 0.5rem 1rem 0;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    img, iframe {
+      max-width: 100%;
+      margin: 1rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    iframe { height: 600px; width: 100%; }
+    .language-switcher { margin-bottom: 1rem; }
+  
+.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+nav {
+  width: 250px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+}
+
+main {
+  flex-grow: 1;
+  margin-left: 0;
+  padding: 2rem;
+  max-width: 1000px;
+}
+
+body.dark nav {
+  background: rgba(30, 30, 30, 0.98);
+  color: #f0f0f0;
+}
+body.dark nav a {
+  color: #f0f0f0;
+}
+body.dark nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover animáció a menü linkekhez */
+nav a {
+  transition: background 0.2s, transform 0.2s;
+}
+nav a:hover {
+  transform: translateX(5px);
+  background: rgba(139, 94, 60, 0.15);
+  border-radius: 6px;
+}
+
+/* Aktív menüelem (pl. első link) */
+nav a.active {
+  border-left: 4px solid #c9a57e;
+  background: rgba(201, 165, 126, 0.1);
+  border-radius: 4px;
+}
+
+/* Gombok szépítése */
+button {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s, transform 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Sötét mód átmenetes menü háttér */
+body.dark nav {
+  background: linear-gradient(to bottom, #2c2c2c, #1a1a1a);
+  color: #f0f0f0;
+}
+body.dark nav a {
+  color: #f0f0f0;
+}
+body.dark nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Tartalom szebb megjelenése */
+main {
+  background: #fefefe;
+  border-left: 1px solid #ddd;
+  padding: 3rem;
+  border-radius: 0 10px 10px 0;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+main h1, main h2 {
+  color: #8c5a2e;
+  border-bottom: 2px solid #c9a57e;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+main p {
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+}
+
+main ul {
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+main li {
+  margin-bottom: 0.5rem;
+}
+
+/* Animáció */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body><div class="layout-wrapper"><nav>
+<h3>Menü</h3>
+<ul>
+<li><a class="active" href="#leiras">📘 Projektleírás</a></li>
+</ul>
+<h4 style="margin-top: 2rem;">Vizualizációk</h4>
+<ul>
+<li><a href="#vizualizaciok">📊 Összes vizualizáció</a></li>
+<li><a href="#boxplot">Boxplot</a></li>
+<li><a href="#violin">Violin plot</a></li>
+<li><a href="#histogram">Hisztogram</a></li>
+<li><a href="#box-country">Országonkénti boxplot</a></li>
+<li><a href="#heatmap">Hőtérkép</a></li>
+<li><a href="#pie">Kördiagram</a></li>
+<li><a href="#growth">Növekedés</a></li>
+<li><a href="#bar">Oszlopdiagram</a></li>
+<li><a href="#trend">Trend</a></li>
+<li><a href="#top10">Top 10</a></li>
+<li><a href="#3d">3D ábra 1</a></li>
+<li><a href="#3d-interaktiv-abra">3D ábra 2</a></li></ul>
+<div class="theme-toggle" style="margin-top: 2rem;">
+<button onclick="document.body.classList.toggle('dark')">🌓 Téma</button>
+</div>
+</nav><main><h1>
+<span>GDP alakulása az európai országokban</span>
+<span class="lang ro">Evoluția PIB-ului în țările europene</span>
+<span class="lang en">GDP Trends in European Countries</span>
+</h1><div>
+<h2>Projektleírás</h2>
+<p>Ez az adatvizualizációs projekt az európai országok gazdasági teljesítményét vizsgálja 1990 és 2023 között a bruttó hazai termék (GDP) alakulása alapján. A cél, hogy a felhasználó számára érthető, vizuális módon mutassa be, hogyan fejlődött az adott ország gazdasága az elmúlt évtizedek során.</p>
+<p>A feldolgozott adatok hivatalos forrásból származnak (EUROSTAT) és az európai országok éves GDP-jét tartalmazzák 1990-től 2023-ig, USD-ben. Az adatok alkalmasak időbeli trendek és országok közötti különbségek vizsgálatára is.</p>
+<p>Ez az időszak különösen változatos gazdasági eseményeket foglal magában: keleti blokk összeomlása, euró bevezetése, 2008-as válság, COVID-19. A GDP alakulása jól tükrözi e változások hatását az egyes országokra.</p>
+<p>A cél felhasználók diákok, oktatók, adatelemzők, közgazdászok, illetve minden érdeklődő, aki szeretné megérteni az európai gazdaság dinamikáját adatalapú módon.</p>
+<p>A projekt által a felhasználó megismerheti az országok gazdasági fejlődését, láthatja a különbségeket, és képes lesz az adatok alapján önálló következtetéseket levonni. Ehhez a következő vizualizációk lesznek segítségül:</p>
+<ul>
+<li>oszlopdiagram (országonkénti GDP egy adott évben)</li>
+<li>vonaldiagram (országok GDP-je időben)</li>
+<li>kördiagram (GDP megoszlás a top 10 országban)</li>
+<li>hisztogram (GDP-értékek eloszlása)</li>
+<li>növekedési diagram (pl. 2000–2023 közti növekedés)</li>
+<li>átlagos GDP alapján rendezett top 10 ország</li>
+<li>hőtérkép (ország + év alapú GDP-mátrix)</li>
+<li>buborékdiagram (ország–év–GDP 3D-ben)</li>
+<li>boxplot (éves és országonkénti eloszlás)</li>
+<li>violin plot (eloszlás és sűrűség egyben)</li>
+<li>3D interaktív diagram (Plotly segítségével)</li>
+</ul>
+<p>A vizualizációk könnyen kiterjeszthetők további országokra, mutatókra (pl. GDP/fő), vagy más kontinensekre is. Az adatszerkezet új adatokkal egyszerűen bővíthető.</p>
+<p>A notebook automatikusan feldolgozza és vizualizálja az adatokat, így új év vagy friss adatsor esetén minimális módosítással újra felhasználható.</p>
+<p><strong>További hasznos bővítések:</strong></p>
+<ul>
+<li>egy főre jutó GDP megjelenítése</li>
+<li>további összehasonlító nézetek, például régiós szinten vagy EU-tagállamok kiemelésével</li>
+</ul>
+</div><div><h2>Vizualizációk</h2></div><h2 id="vizualizaciok">Vizualizaciok</h2><img src="plots/GDP eloszlása évek szerint (Boxplot).png"/><h2 id="boxplot">Boxplot</h2><img src="plots/GDP eloszlása évek szerint (Violin plot).png"/><h2 id="violin">Violin</h2><img src="plots/GDP eloszlása minden országra (2023).png"/><h2 id="histogram">Histogram</h2><img src="plots/GDP eloszlása országonként (Boxplot).png"/><h2 id="box-country">Box country</h2><img src="plots/GDP hőtérkép.png"/><h2 id="heatmap">Heatmap</h2><img src="plots/GDP megoszlása TOP 10 (2020).png"/><h2 id="pie">Pie</h2><img src="plots/Országok GDP növekedése (2000-2023).png"/><h2 id="growth">Growth</h2><img src="plots/Összes ország adatai.png"/><h2 id="bar">Bar</h2><img src="plots/Összes ország GDP trendje.png"/><h2 id="trend">Trend</h2><img src="plots/Top 10 ország átlagos GDP alapján.png"/><h2 id="top10">Top10</h2><h2 id="3d">3D ábra 1</h2><iframe height="600" src="gdp_3d_interaktiv.html" style="border:none; margin-top: 1rem; width: 100%;"></iframe><h2 id="3d-interaktiv-abra">3D ábra 2</h2><iframe height="600" src="gdp_3d_interaktiv2.html" style="border:none; margin-top: 2rem; width: 100%;"></iframe></main></div></body>
+</html>
